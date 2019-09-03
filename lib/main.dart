@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
+                  button: TextStyle(color: Colors.white)
                 ),
           )),
       home: MyHomePage(),
@@ -65,11 +66,11 @@ class _MyHomePageState extends State<MyHomePage> {
     }).toList();
   }
 
-  void _addNewTransaction(String txTitle, double txAmount) {
+  void _addNewTransaction(String txTitle, double txAmount, DateTime choseDate) {
     final newTx = Transaction(
       title: txTitle,
       amount: txAmount,
-      date: DateTime.now(),
+      date: choseDate,
       id: DateTime.now().toString(),
     );
     setState(() {
