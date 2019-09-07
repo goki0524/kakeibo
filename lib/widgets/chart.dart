@@ -46,7 +46,8 @@ class Chart extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: groupedTransactionValues.map((data) {
-            return Flexible( // 柔軟にFlexを指定
+            return Flexible(
+              // 柔軟にFlexを指定
               fit: FlexFit.tight,
               child: ChartBar(
                 data['day'],
